@@ -6,15 +6,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Demo - How to create a parallax scrolling website</title>
+        <title>Aigha</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/modernizr-2.7.1.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">  
         <style type="text/css">
 			.back-link a {
 				color: #4ca340;
@@ -44,71 +43,61 @@
 			}
 			.entry-header .inner {
 				text-align: left;
-				margin: 0 auto 20px auto;
-				width: 800px;
+				margin: 0 auto 0 20px;
+				width: 90%;
+                                display: inline-block;
+                                //transition: all 3s ease-in;  
+                                -webkit-animation-name: zoomIn;
+                                -moz-animation-name: zoomIn;
+                                -ms-animation-name: zoomIn;
+                                animation-name: zoomIn;
+                                animation-duration:2s; 
+                                animation-iteration-count:1;
+                                -webkit-animation-duration:2s; 
+                                -webkit-animation-iteration-count:1;
+                                -moz-animation-duration:2s; 
+                                -moz-animation-iteration-count:1;
+                                -ms-animation-duration:2s; 
+                                -ms-animation-iteration-count:1;
+                                
 			}
-			.entry-header { padding-top: 20px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 999999}
+                        .entry-header .inner a,.entry-header .inner a:hover, .entry-header .inner a:focus{
+                            text-decoration: none;
+                        }
+			.entry-header { padding-top: 20px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 15}
 		</style>
     </head>
     <body class="loading">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-       	
+       	<nav id="primary-nav" style="z-index: 17; position: fixed;" class="animated-menu">
+		<ul>
+			<li class="menu-item"><a href="#slide-1" address="true">Accueil</a></li>
+			<li class="menu-item"><a href="#slide-2" address="true">Eaux potables</a></li>
+			<li class="menu-item"><a href="#slide-4" address="true">Eaux de source</a></li>
+			<li class="menu-item"><a href="#slide-6" address="true">Eaux minérales</a></li>
+                        <li class="menu-item"><a href="#slide-8" address="true">Eaux thermales</a></li>
+                        <li class="menu-item"><a href="#slide-10" address="true">Géothermie</a></li>
+			<li class="menu-item"><a href="#slide-12" address="true">Contact</a></li>
+		</ul>
+	</nav>
        	<header class="entry-header">
             <div class="inner">
-		<h1 class="entry-title">AIGHA</h1>
+                <a href="#slide-1"><h1 class="entry-title">AIGHA</h1></a>
+                <h3>Assistance et Ingénierie en Géologie et Hydrogéologie Appliquées</h3>
             </div>
-            <div class="menu-item"><h1>Acceuil</h1></div>
+            <!--<div class="menu-item" data-0="background-color: black; width:18em; left: 2%;" data-150="width: 160px" data-250="width: 170px" data-350="background-color: #069; width: 150px"><h2>Acceuil</h2></div>
+            <a href="#slide-2"><div class="menu-item"><h2>Références</h2></div></a>
+            <a href="#slide-3"><div class="menu-item"><h2>Réalisation</h2></div></a>
+            <a href="#slide-4"><div class="menu-item"><h2>Contact</h2></div></a>-->
 	</header>
        	
        	<main>
-                <nav id="main" data-controller="MainNav">
-                    <ul>
-                        <li>
-                            <h1 data-0="opacity: 1" data-150="opacity: 0.8" data-250="opacity: 0.3" data-350="opacity: 0" style="display: block; left: 15px; opacity: 1;">
-                                <span>SLIDE 1</span>
-                            </h1>
-                            <a href="#slide-1">SLIDE 1</a>
-                        </li>
-                        <li>
-                            <h1 data-0="opacity: 0" data-250="opacity: 0.5" data-350="opacity: 1" data-450="opacity: 0.5" data-550="opacity: 0">
-                                <span>SLIDE 2</span>
-                            </h1>
-                            <a href="#slide-2">SLIDE 2</a>
-                        </li>
-                        <li>
-                            <h1 data-0="opacity: 0" data-550="opacity: 0.5" data-650="opacity: 1" data-750="opacity: 0.5" data-850="opacity: 0">
-                                <span>SLIDE 3</span>
-                            </h1>
-                            <a href="#slide-3">SLIDE 3</a>
-                        </li>
-                        <li>
-                            <h1 data-0="opacity: 0" data-850="opacity: 0.5" data-950="opacity: 1" data-1050="opacity: 0.5" data-1150="opacity: 0">
-                                <span>SLIDE 4</span>
-                            </h1>
-                            <a href="#slide-4">SLIDE 4</a>
-                        </li>
-                        <li>
-                            <h1 data-0="opacity: 0" data-1150="opacity: 0.5" data-1250="opacity: 1" data-1350="opacity: 0.5" data-1450="opacity: 0">
-                                <span>SLIDE 5</span>
-                            </h1>
-                            <a href="#slide-5">SLIDE 5</a>
-                        </li>
-                        <li>
-                            <h1 data-0="opacity: 0" data-1450="opacity: 0.5" data-1550="opacity: 1" data-1650="opacity: 0.5" data-1750="opacity: 0">
-                                <span>SLIDE 6</span>
-                            </h1>
-                            <a href="#slide-6">SLIDE 6</a>
-                        </li>
-                    </ul>
-                </nav>
 	        <section id="slide-1" class="homeSlide">
-	        	<div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
+	        	<div class="bcg" data-center="background-position: 75% 0px" data-bottom-top="background-position: -40% 40%" data-top-bottom="background-position: -40% -50%" data-anchor-target="#slide-1">
 		        	<div class="hsContainer">
-			    		<div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-1 h2">
-				    		<h2>TEXTE + IMAGES</h2>
-				    		<p>This slide moves background image at a slower speed then the page scroll. Text is fading out to opacity 0 at 106 pixels from the top.</p>
+			    		<div class="hsContent" data-center="opacity: 1; transform:translateX( 0% ); transition:all 1s ease;" data-56-top="opacity: 0; transform:translateX( -100% ); transition:all 1s ease;" data-anchor-target="#slide-1 h2">
+				    		<h2>Société d'expertise</h2>
+				    		<p>Etudes, recherches et mise en exploitation des eaux souterraines:</p>
+                                                <p>eaux potables, eaux de sources, eaux minérales, eaux thermales et géothermie</p>
 			    		</div>
 		        	</div>
 	        	</div>
@@ -118,69 +107,308 @@
 		    	<div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-2">
 			    	<div class="hsContainer">
 			    		<div class="hsContent">
-				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Fade me in and out</h2>
-				    		<p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Here we are changing the background color from blue to black. Text is fading in at 206 pixels from the bottom and fading out 106 pixels from the top.</p>
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-256-top="opacity: 1" data-56-top="opacity: 0" data-anchor-target="#slide-2 h2">EAUX POTABLES</h2>
 			    		</div>
 		        	</div>
 		    	</div>
 		    </section>
+            
                     <section id="slide-3" class="homeSlide">
-                            <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 40%;" data-top-bottom="background-position: -40px 50%;" data-anchor-target="#slide-3">
-                            <div class="hsContainer">
+                            <div class="bcg" data-center="background-position: -500px 50%;" data-bottom-top="background-position: -800px 40%;" data-top-bottom="background-position: -800px 50%;" data-anchor-target="#slide-3">
+                            <div class="hsContainer">                                    
                                     <div class="hsContent">
-                                            <div class="plaxEl" data-106-top="opacity: 0" data--30p-top="opacity: 1;" data--60p-top="opacity: 0;" data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;"  data-anchor-target="#slide-3">
-                                                    <h2>Fixed element fading in and out</h2>
-                                                    <p><span class="bgBlack">Text is fixed 206 pixels from the top, while the background is moving 40 pixels to the left.</span></p>
-                                                    <p><span class="bgBlack">Or did you think that the scooter is driving off?</span></p>
+                                            <div class="plaxEl" data-406-top="opacity: 0" data-100-top="opacity: 1;" data--500-top="opacity: 0;" data-center="opacity: 1; position: fixed; top: 372px; width: 22%; left: 72%;z-index:20;"  data-anchor-target="#slide-3">
+                                                    <h2>Tunisie</h2>
+                                                    <p><span class="bgBlack">120 forages (21360m forés)</span></p>
+                                                    <h2>Régions Poitou-Charentes, Aquitaine et Languedoc-Rousillon</h2>
+                                                    <p><span class="bgBlack">20 captages</span></p>
                                             </div>
                                     </div>
                             </div>
 
                         </div>
                     </section>
+            
+                    <section id="slide-4">
+		    	<div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-4">
+			    	<div class="hsContainer">
+			    		<div class="hsContent">
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-4 h2">EAUX DE SOURCES</h2>
+			    		</div>
+		        	</div>
+		    	</div>
+		    </section>    
+            
+                    <section id="slide-5" class="homeSlide homeSlideTall">
+                            <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-5">
+                                    <div class="curtainContainer">
+                                        <div class="bottle"
+                                            data-top="top: 20%;"
+                                            data-100-top="top: 0%;"
+                                            data-center="top: -10%;"
+                                            data-bottom="top: -5%;"
+                                            data-bottom-top="top: 0%;"
+                                            data-anchor-target="#slide-5">                                            
+                                        </div>
+                                            <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-5"></div>
+                                            <div class="copy" data-center="z-index: 20" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-5 .copy">                                                    
+                                                    <h2>6 sites</h2>
+                                                    <ul class="list-source">
+                                                        <li>Source Vitale: Montpeyrou (34 Etude Captage et Dossier)</li>
+                                                        <li>Source du Verdier (34 Etude)</li>
+                                                        <li>Py-Rotja (66 Etude)</li>
+                                                        <li>Molière/Cèze (30 Etude et Captage</li>
+                                                        <li>Cristaline St-Médard (24 Etude Captage et Dossier)</li>
+                                                        <li>Cristaline St-Médard (24 Etude Captage et Dossier)</li>
+                                                    </ul>
+                                            </div>
 
-                    <section id="slide-4" class="homeSlide homeSlideTall">
-                            <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-4">
+                                    </div>
+                            </div>
+                    </section>
+            
+                    <section id="slide-6">
+		    	<div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-6">
+			    	<div class="hsContainer">
+			    		<div class="hsContent">
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-256-top="opacity: 1" data-56-top="opacity: 0" data-anchor-target="#slide-6 h2">EAUX MINERALES</h2>
+			    		</div>
+		        	</div>
+		    	</div>
+		    </section>
+            
+                    <section id="slide-7" class="homeSlide homeSlideTall">
+                            <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-7">
                                     <div class="curtainContainer">
 
-                                            <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-4"></div>
-                                            <div class="copy" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-4 .copy">
-                                                    <h2>Curtain effect while you scroll</h2>
+                                            <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-7"></div>
+                                            <div class="copy" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-7 .copy">
+                                                    <h2>9 sites</h2>
+                                                    <ul>
+                                                        <li>Alet-les-bains (11 Etude)</li>
+                                                        <li>La Vernière (34 Etude Captage et Dossier)</li>
+                                                        <li>La Salvetat (34 Etude Captage et Dossier)</li>
+                                                        <li>Saint-Paul-de-Fenouillet (66 Etude)</li>
+                                                        <li>Chateldon (63 Etude)</li>
+                                                        <li>Marwa (Tunisie Etude Captage et Dossier)</li>
+                                                        <li>Courmayeur (Italie Etude Captage)</li>
+                                                        <li>Monte Bianco (Italie Etude Captage et Dossier)</li>
+                                                        <li>La Cairolle (34 Etude Captage et Dossier)</li>
+                                                    </ul>
+                                            </div>
+
+                                    </div>
+                            </div>
+                    </section>
+            
+                    <section id="slide-8">
+		    	<div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-8">
+			    	<div class="hsContainer">
+			    		<div class="hsContent">
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-256-top="opacity: 1" data-56-top="opacity: 0" data-anchor-target="#slide-8 h2">EAUX THERMALES</h2>
+			    		</div>
+		        	</div>
+		    	</div>
+		    </section>
+            
+                    <section id="slide-9" class="homeSlide homeSlideTall">
+                            <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-9">
+                                    <div class="curtainContainer">
+
+                                            <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-9"></div>
+                                            <div class="copy" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-9 .copy">
+                                                    <h2>18 sites</h2>
+                                                    <ul>
+                                                        <li>La roche-Posay (86 Etude Captage)</li>
+                                                        <li>Rochefort (17 Etude)</li>
+                                                        <li>Dax (40 Etude Captage et Dossier)</li>
+                                                        <li>Avène-les-Bains (34 Etude Captage et Dossier)</li>
+                                                        <li>Bagnols-les-Bains (48 Etude Captage et Dossier)</li>
+                                                        <li>Balaruc-les-Bains (34 Etude Captage et Dossier)</li>
+                                                        <li>Sète (34 Etude Captage)</li>
+                                                        <li>La Chaldette (48 Etude Captage et Dossier)</li>
+                                                        <li>Fontpédrouse (66 Etude Captage)</li>
+                                                        <li>Lamalou-les-Bains (34 Etude Captage et Dossier)</li>
+                                                        <li>Les Escaldes (66 Etude Captage)</li>
+                                                        <li>Motlig (66 Etude)</li>
+                                                        <li>Fontcaude-Juvignac (34 Etude Captage et Dossier)</li>
+                                                        <li>Neyrac (07 Etude Dossier)</li>
+                                                        <li>Gamarde (40 Etude Captage)</li>
+                                                        <li>Les Fumades (30 Etude Captage et Dossier)</li>
+                                                        <li>Thalassothérapie La Grande Motte (34 Etude Captage et Dossier)</li>
+                                                        <li>Thalassothérapie Port-Camargue (30 Etude Captage et Dossier)</li>
+                                                    </ul>
+                                            </div>
+
+                                    </div>
+                            </div>
+                    </section>
+            
+                    <section id="slide-10">
+		    	<div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-10">
+			    	<div class="hsContainer">
+			    		<div class="hsContent">
+				    		<h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-256-top="opacity: 1" data-56-top="opacity: 0" data-anchor-target="#slide-10 h2">GEOTHERMIE</h2>
+			    		</div>
+		        	</div>
+		    	</div>
+		    </section>
+            
+                    <section id="slide-11" class="homeSlide homeSlideTall">
+                            <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-11">
+                                    <div class="curtainContainer">
+
+                                            <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-11"></div>
+                                            <div class="copy" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-11 .copy">
+                                                    <h2>9 sites</h2>
+                                                    <ul>
+                                                        <li>Jonzac (17 1800 mètres Etude Captage et Dossier)</li>
+                                                        <li>La Rochelle (17 800 mètres Etude Captage et Dossier)</li>
+                                                        <li>Bordeaux-Mériadek (33 1200 mètres Etude Captage et Dossier)</li>
+                                                        <li>Bordeaux-Benauge (33 1200 mètres Etude Captage et Dossier)</li>
+                                                        <li>Pessac-Saige (33 1200 mètres Etude Captage et Dossier)</li>
+                                                        <li>Le Teich-Pirac (33 1800 mètres Etude Captage et Dossier)</li>
+                                                        <li>Mont-de-Marsan (40 1800 mètres Etude)</li>
+                                                        <li>Castillonne (34 1500 mètres Etude Captage et Dossier)</li>
+                                                        <li>Le Puech (34 Etude Captage)</li>
+                                                    </ul>
                                             </div>
 
                                     </div>
                             </div>
                     </section>
 		    
-		    <section id="slide-5" class="homeSlide homeSlideTall2">
+		    <section id="slide-12" class="homeSlide">
 		    	<div class="bcg">
-			    	&nbsp;
-		    	</div>
-		    	<div class="bcg bcg2" data-bottom-top="opacity: 0;" data--33p-top="opacity: 0;" data--66p-top="opacity: 1;" data-anchor-target="#slide-5">
 			    	<div class="hsContainer">
-				    	<div class="hsContent" data-bottom-top="opacity: 0;" data-center="opacity: 1" data-anchor-target="#slide-5">
-				    		<h2>Fixed element fading in and out</h2>
-				    		<p>Showcase your beautiful images before blurring the scene and fading in your headline.</p>
-			    		</div>
-			    	</div>
-		    	</div>
-		    	<div class="bcg bcg3" data-300-bottom="opacity: 0;" data-100-bottom="opacity: 1;" data-anchor-target="#slide-5">
-			    	<div class="hsContainer">
-				    	<div class="hsContent" data-100-bottom="opacity: 0;" data-bottom="opacity: 1;" data-anchor-target="#slide-5">
-				    		<h2>The End</h2>
-				    		<p>Not enough parallax goodness? Let me know in the comments or hit me up at <a href="https://www.twitter.com/ihatetomatoes" target="_blank">@ihatetomatoes</a>.</p>
+				    	<div class="hsContent">                                            
+                                            <div id="contact">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2885.863885183714!2d3.9444539!3d43.6718006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a6591e05ef03%3A0x33efeef532e30281!2s2200+Avenue+de+Vendargues%2C+34820+Teyran!5e0!3m2!1sfr!2sfr!4v1417769111942" width="70%" height="250" frameborder="0" style="border:0"></iframe>                                                                                               
+                                                <form action="process.php" id="contact_form" method="POST">
+                                                    <input id="nom" name="nom" type="text" class="inp" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Nom:">
+                                                    <span id="msg_nom"></span>
+                                                    <input id="email" name="email" type="email" class="inp" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="E-Mail:">
+                                                    <span id="msg_email"></span>
+                                                    <input id="sujet" name="sujet" type="text" class="inp" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="Sujet:">
+                                                    <span id="msg_sujet"></span>
+                                                    <textarea id="message" name="message" rows="5" class="msg" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';">Message:</textarea>
+                                                    <span id="msg_message"></span>
+                                                    <div class="clear"></div>
+                                                    <input type="submit" class="sub" value="Envoyer" />
+                                                </form>
+                                                <span id="msg_all"></span> 
+                                                <div class="contact-info"><p>AIGHA<br>2200 avenue de vendargues</p>
+                                                <p>34820 TEYRAN</p></div>
+                                            </div>				    		
 			    		</div>
 			    	</div>
 		    	</div>
 		    </section>
-		    
+                    <div id="forms">
+                        <div class="goutte" style="z-index: 10; position: absolute;" >                    
+                        </div>
+                    </div>
 		</main>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/modernizr-2.7.1.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <script src="js/imagesloaded.js"></script>
+        <script src="js/enquire.min.js"></script>
         <script src="js/skrollr.js"></script>
-        <script src="js/_main.js"></script>
+        <script src="js/responsive.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+				$('.menu-item').click( function(evt) {
+					$('.in').removeClass("in");
+					$('.in').css("height","0px");
+					var page = $(this).children().attr('href');
+					var speed = 750; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top-100 }, speed );
+					evt.preventDefault();	
+				return false;
+				});
+				});
+            $(function () {
+                // config
+            var maxBreakpoint = 980; // maximum breakpoint
+            var targetID = 'primary-nav'; // target ID (must be present in DOM)
+            var triggerID = 'toggle-nav'; // trigger/button ID (will be created into targetID)
 
+            // targeting navigation
+            var n = document.getElementById(targetID);
+
+            // nav initially closed is JS enabled
+            n.classList.add('is-closed');
+
+            // global navigation function
+            function navi() {
+                // when small screen, create a switch button, and toggle navigation class
+                if (window.matchMedia("(max-width:" + maxBreakpoint +"px)").matches && document.getElementById(triggerID)==undefined) {	
+                    n.insertAdjacentHTML('afterBegin','<button id='+triggerID+' title="open/close navigation"></button>');
+                    t = document.getElementById(triggerID);  
+                    t.onclick=function(){ n.classList.toggle('is-closed');}
+                }
+                // when big screen, delete switch button, and toggle navigation class
+                var minBreakpoint = maxBreakpoint + 1;
+                if (window.matchMedia("(min-width: " + minBreakpoint +"px)").matches && document.getElementById(triggerID)) {
+                    document.getElementById(triggerID).outerHTML="";
+                }
+            }
+            navi();
+
+            // when resize or orientation change, reload function
+            window.addEventListener('resize', navi);
+                
+                
+                
+                var delays = [1000, 3000, 5000, 7000, 9000];
+                $('.menu-item').addClass('animated-menu');
+                
+                $("#contact_form").submit(function(event){
+                    alert($("#nom").val());
+                    var nom        = $("#nom").val();
+                    var sujet      = $("#sujet").val();
+                    var email      = $("#email").val();
+                    var message    = $("#message").val();
+                    var dataString = nom + sujet + email + message;
+                    var msg_all    = 'Merci de remplir tous les champs';
+                    var msg_alert  = 'Merci de remplir ce champs';
+                    if(dataString  == '')
+                    {
+                        $('#msg_all').html(msg_all);
+                    }
+                    else if(nom == '')
+                    {
+                        $('#msg_nom').html(msg_alert);
+                    }
+                    else if(sujet == '')
+                    {
+                        $('#msg_sujet').html(msg_alert);
+                    }
+                    else if(email == '')
+                    {
+                        $('#msg_email').html(msg_alert);
+                    }
+                    else if(message == '')
+                    {
+                        $('#msg_message').html(msg_alert);
+                    }
+                    else
+                    {
+                        $.ajax({
+                            type : "POST",
+                            url: $(this).attr('action'),
+                            data: $(this).serialize(),
+                            success : function(){
+                                $('#contact_form').html('<p>Formulaire bien envoyé</p>');
+                            },
+                            error: function(){
+                                $('#contact_form').html("<p>Erreur d'appel, le formulaire ne peut pas fonctionner</p>");
+                            }
+                        });
+                    }
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>
