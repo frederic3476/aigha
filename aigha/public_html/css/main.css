@@ -291,11 +291,13 @@ background-color: #e4e2dd;
 */
 
 #forms .goutte {
-    top: 1366px;
+    top: 154%;
     left: 50%;
-    margin-left: -1210px;
-    width: 4000px;
-    height: 1770px;
+    margin-left: -62%;
+    //width: 4000px;
+    width: 213%;
+    //height: 1770px;
+    height: 200%;
     background: #337ab7;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
