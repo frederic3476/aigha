@@ -146,6 +146,17 @@ main {
 	height: 100%;
 	width: 100%;
 }
+
+.inner img{
+    width: 15%;
+}
+
+.inner h3 {
+    margin: -21px 0px 0px 100px;
+    font-size: 17px;
+    font-family: serif;
+}
+
 /* Slide 1 */
 #slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
 
@@ -163,16 +174,19 @@ main {
 
 
 /* Slide 5 */
-#slide-5 {position: relative;}
+#slide-5 {position: relative; height: 600px;}
 #slide-5 .bcg {background-color: #e4e2dd;}
 #slide-5 .bcg2 {background-image:url('../img/bcg_slide-5b.jpg'); position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 1}
 #slide-5 .bcg3 {background: none; background-color: #010101; z-index: 2;  position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 2}
 
 /* Slide 7 */
+#slide-7 {height: 600px;}
 #slide-7 .bcg {background-color: #e4e2dd;}
 
 /* Slide 9 */
-#slide-9 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
+#slide-9 .bcg {
+background-color: #e4e2dd;
+}
 
 /* Slide 11 */
 #slide-11 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
@@ -233,6 +247,11 @@ main {
             z-index: 15;
         }
         
+        #slide-5 .curtainContainer {
+            margin-left: 20px;
+            padding-top: 50px;
+        }
+        
         #slide-4 h2{
             text-align: left;                           
         }
@@ -245,18 +264,39 @@ main {
         .list-source li:before {
             content: "\A4 \ ";
             }
+            
+        #slide-7 .bcg .hsContainer .hsContent p{
+            font-size: 20px;
+        }
+        
+        #slide-7 .curtainContainer {
+            z-index: 15;
+            text-align: center;
+        }
+        
+        #slide-7 .curtainContainer .copy{
+            bottom: 80%;          
+        }
+        
+        #slide-9 .curtainContainer {
+            z-index: 15;
+            text-align: center;
+            }
+         
+         #slide-9 .curtainContainer .copy{
+            bottom: 40%;          
+        }   
 
 /*FORMS
 */
 
 #forms .goutte {
-    top: 1212px;
+    top: 1366px;
     left: 50%;
     margin-left: -1210px;
     width: 4000px;
     height: 1770px;
     background: #337ab7;
-    border-radius: 45%;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -508,7 +548,6 @@ nav#main li.active a {background-position: 0 0;}
     right: 171px;
     height: 100px;
     font-family: "Soho Condensed Light";
-    text-transform: uppercase;
 }
 
 #primary-nav ul {    
@@ -548,12 +587,12 @@ nav#main li.active a {background-position: 0 0;}
 .bottle {
     background-image: url(../img/WaterBottleTrans.png);
     position:   absolute;
-    z-index:25;
+    z-index:16;
     margin-left:70px; 
     margin-top:80px;
     width: 220px;
     height: 709px;
-    right: 50%;
+    right: 4%;
 }
 
 /*ANIMATIONS*/
