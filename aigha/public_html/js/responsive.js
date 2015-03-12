@@ -30,7 +30,7 @@
 	    }
 
 	    // Init Skrollr for 768 and up
-	    if( winW >= 768) {
+	    if( winW >= 980) {
 
 	        // Init Skrollr
 	        var s = skrollr.init({
@@ -70,7 +70,7 @@
 	    };
 	}
 
-	enquire.register("screen and (min-width : 768px)", initAdjustWindow(), false)
+	enquire.register("screen and (min-width : 980px)", initAdjustWindow(), false)
 	        .listen(100);
 		
 } )( jQuery );

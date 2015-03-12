@@ -86,12 +86,49 @@ textarea {
    ========================================================================== */
 body, html {
     height: 100%;
+    font-size: 60%;
     min-height: 100%;
     background-color: #000000;
 }
-body {
-    font-size: 60%;
+
+.back-link a {
+    color: #4ca340;
+    text-decoration: none; 
+    border-bottom: 1px #4ca340 solid;
 }
+.back-link a:hover,
+.back-link a:focus {
+    color: #408536; 
+    text-decoration: none;
+    border-bottom: 1px #408536 solid;
+}
+h1 {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #1c1d1e;
+    font-size: 32px;
+    margin-bottom: 3px;
+}
+h2 {
+    color: #1c1d1e;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+.entry-header .inner {
+    text-align: left;
+    margin: 0 auto 0 20px;
+    width: 90%;
+    display: inline-block;
+
+}
+.entry-header .inner a,.entry-header .inner a:hover, .entry-header .inner a:focus{
+    text-decoration: none;
+}
+.entry-header { padding-top: 5px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 15}
+
 .no-js {
     padding-top: 106px;
 }
@@ -136,17 +173,27 @@ main {
 }
 
 /* Slide 1 */
-#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
-#slide-1 {
-    position: relative;
+#slide-1 .bcg {
+    background-image:url('../img/waterfall-429564_1280.jpg');
+    background-position: top right;
+    background-size: inherit;
 }
 
+#slide-1 {
+    position: relative;
+    background: #337ab7;
+}
+
+
+
 #slide-1 .bcg .hsContainer .hsContent h2{
-    font-size: 4rem;
+    font-size: 7rem;
+    text-shadow: 1px 1px white;
+    color: orange;
 }
 
 #slide-1 .bcg .hsContainer .hsContent p{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 /* Slide 2 */
@@ -157,10 +204,18 @@ main {
 
 #slide-3 .bcg .hsContainer .hsContent p{
     color: white;
+    line-height: 3.5rem;
 }
 
 #slide-3 .bcg .hsContainer .hsContent h3{
     font-size: 2rem;
+}
+
+#slide-3 .highlight_C {
+    font-color:green;
+    font-weight: bold;
+    line-height: 1rem;
+    color: burlywood;
 }
 
 
@@ -185,13 +240,14 @@ main {
 
 
 /* Slide 4 */
-#slide-4 {position: relative; height: 600px;}
+#slide-4 {position: relative; height: 800px;}
 #slide-4 .bcg {background-color: white;}
 #slide-4 .bcg2 {position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 1}
 #slide-4 .bcg3 {background: none; background-color: #010101; z-index: 2;  position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 2}
 
 /* Slide 5 */
-#slide-5 .bcg {background: #ed1a46; }
+#slide-5 {position: relative; height: 1120px;}
+#slide-5 .bcg {background: orange; }
 
 #slide-5 .curtainContainer {            
     text-align: center;
@@ -219,9 +275,20 @@ main {
     padding: 0 8%;
     text-align: center
 }
+
+#slide-1 .hsContent {    
+  margin: 0; 
+  text-align: left;
+  padding: 0 1%;
+}
+
+#slide-1 .hsContent p{    
+  margin: 0; 
+}
+
 .hsContent h2,
 .copy h2 {
-    color: burlywood;
+    color: cornflowerblue;
     font-size: 40px;
     line-height: 60px;
     margin-bottom: 12px;
@@ -247,13 +314,17 @@ main {
     padding-top: 50px;
 }
 
+#slide-5 .curtainContainer{
+    padding-top: 50px;
+}
+
 #slide-4 .curtainContainer .copy {
     left: 0;
 }
 /* width: 100%; */
 
 .list-source {
-    width: 33%;
+    width: 29%;
     text-align: center;
     display: inline-block;
     vertical-align: top;
@@ -263,15 +334,14 @@ main {
     line-height: 2.2rem;
     /* margin: 5% 0%; */
     position: relative;
-    z-index: 15;
 }
 
 #source {
-    padding: 1% 5% 1% 15%;
+    padding: 1% 4% 1% 15%;
 }
 
 #minerale {
-    padding: 1% 5%;
+    padding: 1% 8%;
 }
 
 #thermale {
@@ -284,19 +354,36 @@ main {
 
 .list-source .ul-title {
     padding: 25px 0 30px 0;
-    font-size: 48px;
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 85%;
+    color: cornflowerblue;
+    text-align: center;
 }
 
-.list-source.border {
+.list-source .ul-subtitle {
+    padding: 25px 0 8px 0;
+    font-size: 3rem;
+    line-height: 85%;
+    color: green;
+}
+
+
+#slide-5 .list-source .ul-title {
+    color: black;
+}
+
+.list-source.border-left {
     border-left: 1px solid #334251;
 }
 
+.list-source.border-right {
+    border-right: 1px solid #334251;
+}
+
 .list-source li{
-    line-height: 36px;
+    line-height: 2.5rem;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: left;
 }                            
 
@@ -587,21 +674,21 @@ nav#main li.active a {background-position: 0 0;}
 }
 
 #primary-nav ul li {
-    width: 47px;
+    width: 97px;
     margin-top: 10px;
 }
 
 #primary-nav ul li a {
-    display: block;
-    width: 190px;
-    padding: 5px 0 7px 29px;
-    border-top: 2px #c0c3c2 solid;
-    border-bottom: 2px #c0c3c2 solid;
-    text-decoration: none;
-    font-size: 20px;
-    color: #337ab7;
-    background: gainsboro;
-    line-height: 26px;
+      display: block;
+        width: 253px;
+        padding: 5px 0px 7px 15px;
+        border-top: 2px #c0c3c2 solid;
+        border-bottom: 2px #c0c3c2 solid;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        background: orange;
+        line-height: 26px;
 }
 #primary-nav ul li a:hover{
     color:#001242;
@@ -796,6 +883,7 @@ nav#main li.active a {background-position: 0 0;}
     margin-bottom: 14px;
     padding-left: 10px;
     width: 240px;
+    font-size: 2rem;
 }
 
 #contact h2{
@@ -852,6 +940,7 @@ user agent stylesheetinput, textarea, keygen, select, button, meter, progress {
     padding-left: 10px;
     padding-top: 10px;
     width: 310px;
+    font-size: 2rem;
 }
 
 textarea {
@@ -873,10 +962,38 @@ textarea {
     word-wrap: break-word;
 }
 
+.sub {
+    font-size: 2rem;
+      display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  
+}
+
 #contact .contact-info{
     display: inline-block;
     width:30%;
     vertical-align: top;
+    font-size: 2rem;
 }
 
 #contact .contact-info p{
