@@ -22,10 +22,10 @@
 		setTimeout(function() {
 		      
 		      // Resize sections
-		      //adjustWindow();
+		      adjustWindow();
 		      
 		      // Fade in sections
-			  //$body.removeClass('loading').addClass('loaded');
+			  $body.removeClass('loading').addClass('loaded');
 			  
 		}, 800);
 	});
