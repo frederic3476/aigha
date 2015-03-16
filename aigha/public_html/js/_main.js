@@ -11,26 +11,6 @@
     }
 })(this);
 
-/**
- * How to create a parallax scrolling website
- * Author: Petr Tichy
- * URL: www.ihatetomatoes.net
- * Article URL: http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/
- */
-
-$(document).ready(function () {
-    $('.menu-item').click(function (evt) {
-        $('.in').removeClass("in");
-        $('.in').css("height", "0px");
-        var page = $(this).children().attr('href');
-        var speed = 750; // Durée de l'animation (en ms)
-        $('html, body').animate({scrollTop: $(page).offset().top - 120}, speed);
-        evt.preventDefault();
-        return false;
-    });
-});
-
-
 (function ($) {
 
     var maxBreakpoint = 980; // maximum breakpoint
@@ -64,6 +44,16 @@ $(document).ready(function () {
     // when resize or orientation change, reload function
     window.addEventListener('resize', navi);
 
+    jQuery(document).ready(function () {
+                jQuery('.menu-item').click(function (evt) {
+                    n.classList.toggle('is-closed');
+                    var page = jQuery(this).children().attr('href');
+                    var speed = 750; // Durée de l'animation (en ms)
+                    jQuery('html, body').animate({scrollTop: jQuery(page).offset().top-100}, speed);
+                    evt.preventDefault();
+                    return false;
+                });
+    });
 
 
     var delays = [1000, 3000, 5000, 7000, 9000];

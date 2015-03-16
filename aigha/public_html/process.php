@@ -46,8 +46,8 @@
     // Les messages d'erreurs ci-dessus s'afficheront si Javascript est désactivé
    
     // PREPARATION DES DONNEES
-    $destinataire = "frederic.teissier@live.fr";
-    $objet        = "Aigha " . $sujet;
+    $destinataire = "teissier@aigha.com";
+    $objet        = "Site Aigha :" . $sujet;
     $contenu      = "Nom de l'expéditeur : " . $nom . "\r\n";
     $contenu     .= $message."\r\n\n";
  

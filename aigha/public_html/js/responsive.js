@@ -29,7 +29,7 @@
 	        winH = 550;
 	    }
 
-	    // Init Skrollr for 768 and up
+	    // Init Skrollr for 980 and up
 	    if( winW >= 980) {
 
 	        // Init Skrollr
@@ -70,8 +70,7 @@
 	    };
 	}
 
-	enquire.register("screen and (min-width : 980px)", initAdjustWindow(), false)
-	        .listen(100);
+	enquire.register("screen and (min-width : 980px)", initAdjustWindow(), false);
 		
 } )( jQuery );
 
