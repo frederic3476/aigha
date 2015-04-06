@@ -17,7 +17,7 @@ eaux potables, eaux de sources, eaux minérales, eaux thermales et géothermie">
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.old.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body class="loading">
        	<nav id="primary-nav" style="z-index: 17; position: fixed;" class="animated-menu">
@@ -94,7 +94,7 @@ eaux potables, eaux de sources, eaux minérales, eaux thermales et géothermie">
                                 <li class="ul-subtitle">Dordogne</li>
                                 <li>Cristaline St-Médard <img src="img/etude33.svg" /> Captage et Dossier)</li>
                             </ul>
-                            <ul id="minerale" class="list-source border-left">
+                            <ul id="minerale" class="list-source">
                                 <li class="ul-title">EAUX MINERALES</li>
                                 <li class="ul-subtitle">Aude</li>
                                 <li>Alet-les-bains <img src="img/etude33.svg" /></li>
@@ -129,7 +129,7 @@ eaux potables, eaux de sources, eaux minérales, eaux thermales et géothermie">
 
                         <!--<div class="curtain"  data-100-top="width: 10%; top: -20%;" data--100-bottom="width: 100%;" data-bottom-top="width: 100%;" data-center="width: 0%; top: 0%;" data-anchor-target="#slide-11"></div>-->
                         <div class="copy">                                                    
-                            <ul id="thermale" class="list-source border-right">
+                            <ul id="thermale" class="list-source">
                                 <li class="ul-title">EAUX THERMALES</li>
                                 <li class="ul-subtitle">Vienne</li>
                                 <li>La roche-Posay <img src="img/etude33.svg" /><img src="img/captage.svg" /></li>
@@ -193,26 +193,14 @@ eaux potables, eaux de sources, eaux minérales, eaux thermales et géothermie">
                                 <div id="google-map">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2885.863885183714!2d3.9444539!3d43.6718006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a6591e05ef03%3A0x33efeef532e30281!2s2200+Avenue+de+Vendargues%2C+34820+Teyran!5e0!3m2!1sfr!2sfr!4v1417769111942"></iframe>                                                                                               
                                 </div>
-                                <div id="cont">
-                                    <span id="msg_all"></span> 
+                                <div id="cont">                                    
                                     <form action="process.php" id="contact_form" method="POST">
-                                        <input id="nom" name="nom" type="text" class="inp" onblur="if (this.value == '')
-                                                                    this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-                                                                                this.value = '';" value="Nom:">
-                                        <span id="msg_nom"></span>
-                                        <input id="email" name="email" type="email" class="inp" onblur="if (this.value == '')
-                                                                    this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-                                                                                this.value = '';" value="E-Mail:">
-                                        <span id="msg_email"></span>
-                                        <input id="sujet" name="sujet" type="text" class="inp" onblur="if (this.value == '')
-                                                                    this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-                                                                                this.value = '';" value="Sujet:">
-                                        <span id="msg_sujet"></span>
-                                        <textarea id="message" name="message" rows="5" class="msg" onblur="if (this.value == '')
-                                                                    this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue)
-                                                                                this.value = '';">Message:</textarea>
-                                        <span id="msg_message"></span>
-                                        <div class="clear"></div>
+                                        <input id="nom" name="nom" type="text" class="inp" placeholder="Nom:">
+                                        <input id="email" type="email" name="email" class="inp" placeholder="E-Mail:">
+                                        <input id="sujet" name="sujet" type="text" class="inp" placeholder="Sujet:">
+                                        <textarea id="message" name="message" rows="5" class="msg" placeholder="Message:"></textarea>
+                                        <div><span id="msg_all"></span></div>
+                                        <div class="clear"></div>                                        
                                         <input type="submit" class="sub" value="Envoyer" />
                                     </form>
                                     

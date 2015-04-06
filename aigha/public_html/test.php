@@ -1,7 +1,7 @@
 <?php
  
 // Mettez ici votre adresse valide
-$to = "frederic.teissier@live.fr";
+$to = "fredjacou@gmail.com";
  
 // Sujet du message 
 $subject = "Test fonction mail() de PHP";
